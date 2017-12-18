@@ -107,11 +107,11 @@ listbox.sel_blue = 0;
 if ( my_config["enable_list_type"] == "vert_wheel" )
 {
 fe.load_module( "conveyor" );
-local wheel_x = [ flx*0.02, flx* 0.02, flx* 0.02, flx* 0.02, flx* 0.02, flx* 0.02, flx* 0.01, flx* 0.02, flx* 0.02, flx* 0.02, flx* 0.02, flx* 0.02, ]; 
+local wheel_x = [ flx*0.02, flx* 0.02, flx* 0.02, flx* 0.02, flx* 0.02, flx* 0.02, flx* 0.02, flx* 0.02, flx* 0.02, flx* 0.02, flx* 0.02, flx* 0.02, ]; 
 	local wheel_y = [ -fly*0.22, -fly*0.105, fly*0.0, fly*0.105, fly*0.215, fly*0.325, fly*0.440, fly*0.565, fly*0.680 fly*0.795, fly*0.910, fly*0.99, ];
-	local wheel_w = [  336,  336,  336,  336,  336,  336, 380,  336,  336,  336,  336,  336, ];
+	local wheel_w = [  225,  225,  225,  225,  225,  225, 250,  225,  225,  225,  225,  225, ];
 	local wheel_a = [  150,  150,  150,  150,  150,  150, 235,  150,  150,  150,  150,  150, ];
-	local wheel_h = [  116,  116,  116,  116,  116,  116, 140,  116,  116,  116,  116,  116, ];
+	local wheel_h = [  75,  75,  75,  75,  75,  75, 125,  75,  75,  75,  75,  75, ];
 	local wheel_r = [  0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, ];
 
 local num_arts = 8;
@@ -163,9 +163,9 @@ try { conveyor.transition_ms = my_config["transition_ms"].tointeger(); } catch (
 /////////////////////
 //  special art
 /////////////////////
-local next = fe.add_image("nextsystem.swf", 550, 950, 320, 110);
-local prev = fe.add_image("previoussystem.swf", 1000, 950, 380, 110);
-local freeplay = fe.add_image("freeplay.swf", 1475, 985, 0, 0);
+//local next = fe.add_image("nextsystem.swf", 550, 950, 320, 110);
+//local prev = fe.add_image("previoussystem.swf", 1000, 950, 380, 110);
+//local freeplay = fe.add_image("freeplay.swf", 1475, 985, 0, 0);
 //local pressstart = fe.add_image("pressstart.swf", 550, 35, 0, 0);
 
 //fe.add_transition_callback( "fade_transitions" );
