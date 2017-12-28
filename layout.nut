@@ -108,10 +108,10 @@ if ( my_config["enable_list_type"] == "vert_wheel" )
 {
 fe.load_module( "conveyor" );
 local wheel_x = [ flx*0.02, flx* 0.02, flx* 0.02, flx* 0.02, flx* 0.02, flx* 0.02, flx* 0.02, flx* 0.02, flx* 0.02, flx* 0.02, flx* 0.02, flx* 0.02, ]; 
-	local wheel_y = [ -fly*0.22, -fly*0.105, fly*0.0, fly*0.105, fly*0.215, fly*0.325, fly*0.440, fly*0.565, fly*0.680 fly*0.795, fly*0.910, fly*0.99, ];
-	local wheel_w = [  225,  225,  225,  225,  225,  225, 250,  225,  225,  225,  225,  225, ];
+	local wheel_y = [ -fly*0.22, -fly*0.105, fly*0.0, fly*0.105, fly*0.215, fly*0.325, fly*0.410, fly*0.565, fly*0.680 fly*0.795, fly*0.910, fly*0.99, ];
+        local wheel_w = [  flx* 0.15,  flx* 0.15,  flx* 0.15,  flx* 0.15,  flx* 0.15,  flx* 0.15, flx* 0.18,  flx* 0.15,  flx* 0.15,  flx* 0.15,  flx* 0.15,  flx* 0.15, ];
+        local wheel_h = [  fly* 0.1,  fly* 0.1,  fly* 0.1,  fly* 0.1,  fly* 0.1,  fly* 0.1, fly* 0.175,  fly* 0.1,  fly* 0.1,  fly* 0.1,  fly* 0.1,  fly* 0.1, ];
 	local wheel_a = [  150,  150,  150,  150,  150,  150, 235,  150,  150,  150,  150,  150, ];
-	local wheel_h = [  75,  75,  75,  75,  75,  75, 125,  75,  75,  75,  75,  75, ];
 	local wheel_r = [  0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, ];
 
 local num_arts = 8;
@@ -158,6 +158,7 @@ local conveyor = Conveyor();
 conveyor.set_slots( wheel_entries );
 conveyor.transition_ms = 90;
 try { conveyor.transition_ms = my_config["transition_ms"].tointeger(); } catch ( e ) { }
+conveyor.preserve_aspect_ratio = true;
 }
 
 /////////////////////
